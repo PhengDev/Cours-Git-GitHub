@@ -26,7 +26,7 @@ do
     			nombre = Number(prompt("Trouvez un nombre entre 1 et 100"));
     		}
 
-    		for  (var hp = 1; hp <= 9;)
+    		for  (var hp = 0; hp <= 10;)
     		{	
     			if (nombre === solution)
     			{
@@ -36,14 +36,14 @@ do
 
     				else if ((nombre < solution) && ( nombre > 1))
     				{
-                        nombre = Number(prompt(nombre + " est trop petit \nRetentez votre chance"));
                         hp++;
+                        nombre = Number(prompt(nombre + " est trop petit \nRetentez votre chance"));
     				}
 
     				else if ((nombre > solution) && ( nombre < 100))
     				{
-                        nombre = Number(prompt(nombre + " est trop grand \nRetentez votre chance"));
                         hp++;
+                        nombre = Number(prompt(nombre + " est trop grand \nRetentez votre chance"));
     				}
 
         			else
@@ -88,7 +88,7 @@ do
     			nombre = Number(prompt("Trouvez un nombre entre 1 et 100"));
     		}
 
-    		for  (hp = 1; hp <= 6;)
+    		for  (hp = 0; hp <= 7;)
     		{	
     			if (nombre === solution)
                 {
@@ -97,14 +97,14 @@ do
                 }
                      else if ((nombre < solution) && ( nombre > 1))
                     {
-                        nombre = Number(prompt(nombre + " est trop petit \nRetentez votre chance"));
                         hp++;
+                        nombre = Number(prompt(nombre + " est trop petit \nRetentez votre chance"));
                     }
 
                     else if ((nombre > solution) && ( nombre < 100))
-                    {
-                        nombre = Number(prompt(nombre + " est trop grand \nRetentez votre chance"));
+                    {   
                         hp++;
+                        nombre = Number(prompt(nombre + " est trop grand \nRetentez votre chance"));
                     }
 
                     else
@@ -150,7 +150,7 @@ do
         		nombre = Number(prompt("Trouvez un nombre entre 1 et 100"));
 
         	}
-        	for  (var hp = 1; hp <= 4;)
+        	for  (var hp = 0; hp <= 5;)
         	{	
         		if (nombre === solution)
                 {
@@ -160,14 +160,14 @@ do
 
                     else if ((nombre < solution) && ( nombre > 1))
                     {
-                        nombre = Number(prompt(nombre + " est trop petit \nRetentez votre chance"));
                         hp++;
+                        nombre = Number(prompt(nombre + " est trop petit \nRetentez votre chance"));
                     }
 
                     else if ((nombre > solution) && ( nombre < 100))
                     {
-                        nombre = Number(prompt(nombre + " est trop grand \nRetentez votre chance"));
                         hp++;
+                        nombre = Number(prompt(nombre + " est trop grand \nRetentez votre chance"));
                     }
 
                 else
