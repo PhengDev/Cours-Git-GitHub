@@ -60,3 +60,50 @@ alert("Bienvenue dans ce jeu de devinette !");
     				break;
     			}	
     		}
+       case "normal" :
+            alert("Vous avez choisis la difficulter " + difficulter);
+            alert("Vous avez 7 essaies");
+
+    		var nombre = 0;
+
+    		while ((nombre < 1) || (nombre > 100))
+    		{
+    			nombre = Number(prompt("Trouvez un nombre entre 1 et 100"));
+    		}
+
+    		for  (hp = 1; hp <= 6;)
+    		{	
+    			if (nombre === solution)
+                {
+                    alert("Bravo, vous avez réussi à trouver le nombre caché qui était bien "+ solution + " en " + hp + " essaies");
+                    break;
+                }
+                     else if ((nombre < solution) && ( nombre > 1))
+                    {
+                        nombre = Number(prompt(nombre + " est trop petit \nRetentez votre chance"));
+                        hp++;
+                    }
+
+                    else if ((nombre > solution) && ( nombre < 100))
+                    {
+                        nombre = Number(prompt(nombre + " est trop grand \nRetentez votre chance"));
+                        hp++;
+                    }
+
+                    else
+                    {
+                        alert("Attention ! vous êtes en dehors de l'intervalle 1 à 100");
+                        nombre = Number(prompt("Trouvez un nombre entre 1 et 100 \nRetentez votre chance"));
+                    }
+
+                if (hp === 5)
+                {
+                    alert("Attention il vous reste un dernier essaie !");
+                }
+
+                if (hp === 6)
+                {
+                    alert("Vous avez atteint la limite, vous avez perdu ! \n La solution était " + solution);
+                    break;
+                }
+    		}
