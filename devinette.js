@@ -1,14 +1,17 @@
 alert("Bienvenue dans ce jeu de devinette !");
+var démarrer = true;
 
+do
+{
     var solution = Math.floor(Math.random() * 100) + 1;
     var difficulter = "";
+    var retry = "";
 
     while ((difficulter !== "facile") && (difficulter !== "normal") && (difficulter !== "difficile"))
     {
     	difficulter = prompt("Choissisez la difficulter: " + "\n facile / normal / difficile");
         difficulter = difficulter.toLowerCase();
     }
-
     switch (difficulter)
     {
 
@@ -60,7 +63,21 @@ alert("Bienvenue dans ce jeu de devinette !");
     				break;
     			}	
     		}
-       case "normal" :
+
+        while ((retry !== "oui") && (retry !== "non"))
+        {
+            var retry = prompt("Voulez-vous recommencer?\nOui / Non");
+            retry = retry.toLowerCase();
+        }
+
+        if (retry == "non")
+        {
+            démarrer = false;
+        }
+
+    	break;
+
+    	case "normal" :
             alert("Vous avez choisis la difficulter " + difficulter);
             alert("Vous avez 7 essaies");
 
@@ -107,7 +124,21 @@ alert("Bienvenue dans ce jeu de devinette !");
                     break;
                 }
     		}
-        case "difficile" :
+
+        while ((retry !== "oui") && (retry !== "non"))
+        {
+            retry = prompt("Voulez-vous recommencer?\nOui / Non");
+            retry = retry.toLowerCase();
+        }
+
+        if (retry == "non")
+        {
+            démarrer = false;
+        }
+
+    	break;
+
+    	case "difficile" :
             alert("Vous avez choisis la difficulter " + difficulter);
             alert("Vous avez 5 essaies");
 
@@ -156,5 +187,19 @@ alert("Bienvenue dans ce jeu de devinette !");
                     break;
                 }
             }
+
+        while ((retry !== "oui") && (retry !== "non"))
+        {
+            var retry = prompt("Voulez-vous recommencer?\nOui / Non");
+            retry = retry.toLowerCase();
+        }
+
+        if (retry == "non")
+        {
+            démarrer = false;
+        }
+
         break;
     }
+}
+while (démarrer == true)
