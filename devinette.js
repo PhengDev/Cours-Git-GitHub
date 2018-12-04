@@ -156,3 +156,5 @@ alert("Bienvenue dans ce jeu de devinette !");
                     break;
                 }
             }
+        break;
+    }
